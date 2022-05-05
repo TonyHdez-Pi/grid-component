@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+:root{
+    --colorCyan: hsl(179, 62%, 43%);
+    --colorBrightYellow: hsl(71, 73%, 54%);
+    --colorLightGray: hsl(204, 43%, 93%);
+    --colorGrayishBlue: hsl(218, 22%, 67%);
+}
+li{
+    list-style-type: none;
+    text-decoration: none;
+}
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-item-1{
+    grid-area: community;
+}
+.grid-item-2{
+    grid-area: suscription;
+}
+.grid-item-3{
+    grid-area: aboutUs;
+}
+.grid-wrapper{
+    box-shadow: 0 0 5px var(--colorGrayishBlue);
+    border-radius: .5rem;
+    width: 50%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "community community community community"
+        "suscription suscription aboutUs aboutUs"    
+    ;
+}
+.community{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+.community > *{
+    width: 80%;
+    margin: .5rem 0;
+}
+.community h2{
+    font-size: 2rem;
+    color: var(--colorCyan);
+}
+.community h1{
+    color: var(--colorBrightYellow);
+    font-size: 1.5rem;
+}
+.community p{
+    color: var(--colorGrayishBlue);
+    font-size: 1.3rem;
+}
+
+.subscription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-color: rgba(43,179,177,255);
+    color: var(--colorLightGray);
+    padding: 1rem;
+}
+.subscription > *{
+    width: 80%;
+    margin: 1rem 0;
+}
+.subscription h2{
+    font-size: 1.4rem;
+}
+.price{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.button__signUp{
+    box-shadow: 0 0 3px 1px gray;
+    background-color: var(--colorBrightYellow);
+    border: 0;
+    height: 3rem;
+    width: 70%;
+    color: #fff;
+    border-radius: .5rem;
+}
+.button__signUp:hover{
+    box-shadow: inset  0 0 3px 1px gray;
+    cursor: pointer;
+}
+.aboutUs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-color: rgba(74,190,189,255);
+    color: var(--colorLightGray);
+}
+.textContainer {
+    width: 80%;
+    height: 65%;
+}
+.textContainer h2{
+    margin-bottom: 1rem;
+}
+.textContainer li{
+    margin: .5rem 0;
+}
+@media screen and (max-width: 810px){
+    .grid-wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 2rem 0;
+        height: fit-content;
+    }
+    .aboutUs h2{
+        margin-top: 2rem;
+    } 
+}
+@media screen and (max-width: 480px) {
+    .grid-wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 2rem 0;
+        height: fit-content;
+    }
+    .aboutUs h2{
+        margin-top: 2rem;
+    } 
+}
