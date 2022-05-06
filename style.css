@@ -33,7 +33,7 @@ main{
     grid-area: aboutUs;
 }
 .grid-wrapper{
-    box-shadow: 0 0 5px var(--colorGrayishBlue);
+    box-shadow: 0px 0px 0.5rem 0px #0000003b;
     border-radius: .5rem;
     width: 50%;
     height: 70%;
@@ -123,24 +123,31 @@ main{
     margin: .5rem 0;
 }
 @media screen and (max-width: 810px){
+    main{
+        height: unset;
+    }
     .grid-wrapper{
         display: flex;
         flex-direction: column;
         width: 50%;
         margin: 2rem 0;
-        height: fit-content;
+        overflow: hidden
     }
     .aboutUs h2{
         margin-top: 2rem;
     } 
 }
 @media screen and (max-width: 480px) {
+    main{
+        height: unset;
+    }
     .grid-wrapper{
         display: flex;
         flex-direction: column;
         width: 80%;
         margin: 2rem 0;
-        height: fit-content;
+        height: unset;
+        overflow: hidden
     }
     .aboutUs h2{
         margin-top: 2rem;
